@@ -6,7 +6,3 @@
 
 ### Description
 <!--Write what you did and what components you update  -->
-
-
-
-#<issueNumber> by @<githubUser>
