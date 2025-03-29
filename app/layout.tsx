@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 import "./globals.css";
-
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "IMEP - Igreja Missões do Evangelho Pleno",
@@ -19,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.variable} antialiased`}>
+      <body className="antialiased font-sans">
         {children}
       </body>
     </html>
