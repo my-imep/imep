@@ -1,4 +1,3 @@
-import React from "react";
 import {TableOfContents} from "lucide-react"
 import Link from "next/link"
 

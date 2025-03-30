@@ -1,4 +1,3 @@
-import React from "react"
 import MainNav from "./main-nav"
 import MobileNav from "./mobile-nav"
 
