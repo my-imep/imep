@@ -5,8 +5,8 @@ import { AiFillInstagram } from "react-icons/ai";
 export default function Shared() {
 	return (
 		<section className="text-white">
-			<div className="bg-[url(/shared-image.svg)] bg-cover bg-center w-full p-10 flex flex-col items-center">
-				<div className="py-10 px-5 border border-neutral-800 rounded-xl frosted-glass flex items-center justify-center gap-10 w-10/12">
+			<div className="bg-[#121212] bg-cover bg-center w-full p-10 flex flex-col items-center">
+				<div className="py-16 px-5 border border-neutral-800 rounded-xl frosted-glass flex items-center justify-around gap-10 w-10/12">
 					<div className="flex flex-col gap-3 w-1/3">
 						<h5 className="font-bold">Conheça a IMEP</h5>
 						<h1 className="text-3xl font-bold">Impactando vidas com amor e fé</h1>
