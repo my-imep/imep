@@ -39,6 +39,7 @@ export default function AuthForm() {
 		try {
 			await signIn('email', {
 				email: data.email,
+				callbackUrl: '/app',
 				redirect: false,
 			})
 			setIsLoading(false)
@@ -58,6 +59,7 @@ export default function AuthForm() {
 		setError('')
 		try {
 			await signIn(provider, {
+				callbackUrl: '/app',
 				redirect: true,
 			})
 		} catch (error) {
