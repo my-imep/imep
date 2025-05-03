@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getToken } from 'next-auth/jwt'
 
 const getUrl = (path: string) => {
-	const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000';
+	const baseUrl = process.env.NEXTAUTH_URL || 'https://iimep.vercel.app';
 	return `${baseUrl}${path}`;
 };
 
