@@ -2,12 +2,36 @@
 const nextConfig = {
 	reactStrictMode: true,
 
+	output: process.env.VERCEL ? 'standalone' : undefined,
+
+	serverExternalPackages: ['mongoose'],
+
+	experimental: {
+		optimizePackageImports: ['@radix-ui/react-switch'],
+	},
+
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
 
 	typescript: {
 		ignoreBuildErrors: true,
+	},
+
+	webpack: (config, { isServer }) => {
+		if (!isServer) {
+			config.resolve.fallback = {
+				...config.resolve.fallback,
+				fs: false,
+				net: false,
+				tls: false,
+			};
+		}
+		return config;
+	},
+
+	generateBuildId: async () => {
+		return 'build-' + Date.now().toString(36);
 	},
 
 	async headers() {
